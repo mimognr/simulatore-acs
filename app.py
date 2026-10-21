@@ -17,16 +17,16 @@ st.sidebar.header("Parametri Macchina ed Impianto")
 
 V1 = st.sidebar.number_input("Volume Puffer 1 (l)", min_value=10, value=186)
 V2 = st.sidebar.number_input("Volume Puffer 2 (l)", min_value=10, value=750)
-P1 = st.sidebar.number_input("Potenza PdC 1 (kW)", min_value=0.0, value=9.0)
-P2 = st.sidebar.number_input("Potenza PdC 2 (kW)", min_value=0.0, value=22.0)
+P1 = st.sidebar.number_input("Potenza PdC 1 (kW)", min_value=0.0, value=10.0)
+P2 = st.sidebar.number_input("Potenza PdC 2 (kW)", min_value=0.0, value=23.0)
 
 st.sidebar.markdown("---")
 st.sidebar.header("Idraulica e Scambio")
 V_primario = st.sidebar.number_input("Portata Primaria (l/min)", min_value=1.0, value=41.67) # 2.5 m3/h
-V_split = st.sidebar.number_input("Portata Split verso T1 (l/min)", min_value=0.0, value=20.0)
+V_split = st.sidebar.number_input("Portata Split verso T1 (l/min)", min_value=0.0, value=15.0)
 T_cold = st.sidebar.number_input("T Ingresso ACS Fredda (°C)", min_value=0.0, value=10.0)
 T_setpoint = st.sidebar.number_input("T Uscita ACS Desiderata (°C)", min_value=0.0, value=42.0)
-efficienza = st.sidebar.number_input("Efficienza Scambiatore (eta)", min_value=0.1, max_value=1.0, value=0.995, step=0.001)
+efficienza = st.sidebar.number_input("Efficienza Scambiatore (eta)", min_value=0.1, max_value=1.0, value=0.95, step=0.001)
 cp = 0.001163 # Capacità termica specifica volumetrica kWh/(l*°C)
 
 st.sidebar.markdown("---")
@@ -35,7 +35,7 @@ PdC1_Ton = st.sidebar.number_input("PdC 1 - Soglia Accensione Ton (°C)", value=
 PdC1_Toff = st.sidebar.number_input("PdC 1 - Soglia Spegnimento Toff (°C)", value=55.0)
 PdC1_delay = st.sidebar.number_input("PdC 1 - Delay ON (minuti)", min_value=0, value=3)
 
-PdC2_Ton = st.sidebar.number_input("PdC 2 - Soglia Accensione Ton (°C)", value=45.0)
+PdC2_Ton = st.sidebar.number_input("PdC 2 - Soglia Accensione Ton (°C)", value=48.0)
 PdC2_Toff = st.sidebar.number_input("PdC 2 - Soglia Spegnimento Toff (°C)", value=50.0)
 PdC2_delay = st.sidebar.number_input("PdC 2 - Delay ON (minuti)", min_value=0, value=6)
 
