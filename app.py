@@ -47,13 +47,13 @@ st.write("Compila la tabella sottostante. Puoi scegliere tra controllo a 'TEMPO'
 
 df_input_default = pd.DataFrame()
 df_input_default["Nome Fase"] = [
-    "Fase 1 (Vasca 600L)", "Fase 2 (Pausa 30 min)", "Fase 3 (Doccia 24L)", 
-    "Fase 4 (Pausa 10 min)", "Fase 5 (Doccia 20L)", "Fase 6 (Pausa 5 min)", 
-    "Fase 7 (Doccia 18L)", "Fase 8 (Mantenimento)"
+    "Fase 1 (Vasca)", "Fase 2 (Pausa)", "Fase 3 (Doccia)", 
+    "Fase 4 (Pausa)", "Fase 5 (Doccia)", "Fase 6 (Pausa)", 
+    "Fase 7 (Doccia)", "Fase 8 (Mantenimento)"
 ]
 df_input_default["Tipo Controllo"] = ["VOLUME", "TEMPO", "TEMPO", "TEMPO", "TEMPO", "TEMPO", "TEMPO", "TEMPO"]
-df_input_default["Valore Limite"] = [600, 30, 15, 10, 10, 5, 10, 135]
-df_input_default["Portata ACS (l/min)"] = [15, 0, 24, 0, 20, 0, 18, 0]
+df_input_default["Valore Limite"] = [600, 30, 10, 10, 10, 5, 10, 135]
+df_input_default["Portata ACS (l/min)"] = [16, 0, 28, 0, 26, 0, 20, 0]
 
 df_fasi = st.data_editor(
     df_input_default,
