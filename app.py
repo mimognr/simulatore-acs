@@ -270,7 +270,7 @@ def evidenzia_allarme(row):
         style = ['background-color: #ffccd5; color: #b70000; font-weight: bold;'] * len(row)
     return style
 
-df_mostra = df_risultati[df_risultati["Tempo (min)"] <= 120].copy()
+df_mostra = df_risultati[df_risultati["Tempo (min)"] <= 180].copy()
 st.dataframe(df_mostra.style.apply(evdenzia_allarme if 'evdenzia_allarme' in locals() else evidenzia_allarme, axis=1).format({
     "Portata ACS (l/min)": "{:.0f}",
     "T1 - Puffer 1 (°C)": "{:.2f}",
