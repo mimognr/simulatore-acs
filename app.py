@@ -52,7 +52,7 @@ df_input_default["Nome Fase"] = [
     "Fase 7 (Doccia)", "Fase 8 (Mantenimento)"
 ]
 df_input_default["Tipo Controllo"] = ["VOLUME", "TEMPO", "TEMPO", "TEMPO", "TEMPO", "TEMPO", "TEMPO", "TEMPO"]
-df_input_default["Valore Limite"] = [600, 30, 10, 10, 10, 5, 10, 135]
+df_input_default["Valore Limite"] = [600, 30, 10, 10, 10, 5, 10, 60]
 df_input_default["Portata ACS (l/min)"] = [16, 0, 28, 0, 26, 0, 20, 0]
 
 df_fasi = st.data_editor(
@@ -224,7 +224,7 @@ fig.add_shape(
 fig.add_annotation(x=10, y=40.5, text="Soglia Minima Comfort (40°C)", showarrow=False, font=dict(color="DarkRed", size=10))
 
 fig.update_layout(
-    xaxis=dict(title="Tempo (minuti)", range=[0, 240]),
+    xaxis=dict(title="Tempo (minuti)", range=[0, 180]),
     yaxis=dict(title="Temperatura (°C)", range=[20, 60]),
     yaxis2=dict(title="Volume ACS Totale Prelevato (Litri)", overlaying="y", side="right", showgrid=False),
     legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
